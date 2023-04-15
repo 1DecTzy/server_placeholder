@@ -20,7 +20,7 @@ const upload = multer({ storage: storage })
 router.post('/pin/post', upload.single('pin_images'), async (req, res) => {
   try {
     const { pin_id, pin_images, text, x, y } = req.body
-    const url = 'http://localhost:8000/public/'
+    const url = 'https://api-placeholder-server.onrender.com/public/'
     const img = url + pin_images
     const Pins = {
       pin_id,
