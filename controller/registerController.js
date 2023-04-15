@@ -3,7 +3,8 @@ const bcrypt = require('bcrypt')
 const mongoose = require('mongoose');
 const registerController = {
     register: async (req, res) => {
-        const {email, password, conpassword,avatar} = req.body;
+        const {email, password, conpassword} = req.body;
+        const {avatar} = req.file
         const salts = await bcrypt.genSalt();
         const hashedPass = bcrypt.hashSync(password, salts, function (_err, hash) {
             console.log(hash);
