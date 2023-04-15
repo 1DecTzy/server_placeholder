@@ -25,8 +25,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname +'./upload')))
 app.use(express.static(path.join(__dirname +'./public/avatar')))
 app.use(express.static(path.join(__dirname +'./public/plans')))
-app.use('/api',loginRouter)
-app.use('/api',registerRouter)
+app.use('',loginRouter)
+app.use('',registerRouter)
 app.use('/api',userRouter);
 app.use('/api',videoRouter)
 app.use('/api',uploadRouter)
