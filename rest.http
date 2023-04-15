@@ -1,0 +1,19 @@
+
+POST http://localhost:8000/api/register HTTP/1.1
+Content-Type: application/json
+
+POST http://localhost:8000/api/login HTTP/1.1
+Content-Type: application/json
+
+POST http://localhost:8000/api/profile/uplaod HTTP/1.1
+
+GET http://localhost:8000/api HTTP/1.1
+Content-Type: application/json
+
+PUT  http://localhost:8000/api/material
+
+PATCH   http://localhost:8000/api/items/update/:id
+
+POST http://localhost:8000/api/pins/post
+
+Content-Type: application/json
