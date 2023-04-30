@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const materialController = {
     material: async(req,res) =>{ 
         const {name,amount,scale,images,user_id} = req.body;
-        const url = 'https://api-placeholder-server.onrender.com/public/'
+        const url = 'https://api-placeholder.onrender.com/public/'
         const material = url + images
         try{
             const Materials = {
