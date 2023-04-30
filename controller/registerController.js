@@ -12,7 +12,11 @@ const registerController = {
             console.log(hash);
         });
         const url = 'https://api-placeholder.onrender.com/public/'
+<<<<<<< HEAD
         const useravatar = url + avatar 
+=======
+        const useravatar = url + avatar
+>>>>>>> 9e9aeb85568ec397f50f4257d4bbac5e093d72e4
         try {
             const existingUser = await Auth.findOne({ email });
             const User = {
