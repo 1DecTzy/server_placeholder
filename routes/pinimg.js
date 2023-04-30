@@ -4,7 +4,7 @@ var cors = require('cors');
 const { Pinimg } = require('../model/pinsModel')
 const multer = require('multer')
 router.use(cors());
-const folder = './public/plans/pins'
+const folder = './public'
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, folder)

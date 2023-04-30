@@ -5,7 +5,7 @@ var cors = require('cors');
 const multer = require('multer')
 const checkAuth = require('../middleware/check-auth')
 const materialController = require('../controller/materialController');
-const folder = './public/material'
+const folder = './public'
 const Material = require('../model/materialModel')
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
