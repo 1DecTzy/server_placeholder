@@ -39,19 +39,11 @@ app.use(pinimgRouter)
 // app.use(express.static('./public/plans'))
 // app.use(express.static('./public/plans/pins'))
 // app.use(express.static('./public/material'))
-<<<<<<< HEAD
-app.use('/public',express.static('./public'))
-app.use('/public',express.static('./public/avatar'))
-app.use('/public',express.static('./public/plans'))
-app.use('/public',express.static('./public/plans/pins'))
-app.use('/public',express.static('./public/material'))
-=======
 app.use('/public',express.static('public'))
 app.use('/public',express.static('public/avatar'))
 app.use('/public',express.static('public/plans'))
 app.use('/public',express.static('public/plans/pins'))
 app.use('/public',express.static('public/material'))
->>>>>>> 9e9aeb85568ec397f50f4257d4bbac5e093d72e4
 app.use(cors())
 app.use(cors({
     origin:[corsOrigin],
