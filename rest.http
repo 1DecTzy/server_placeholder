@@ -1,5 +1,5 @@
 
-POST http://localhost:8000/api/register HTTP/1.1
+POST https://api-placeholder-server.onrender.com/register HTTP/1.1
 Content-Type: application/json
 
 POST http://localhost:8000/api/login HTTP/1.1
@@ -16,4 +16,5 @@ PATCH   http://localhost:8000/api/items/update/:id
 
 POST http://localhost:8000/api/pins/post
 
+GET https://api-placeholder-server.onrender.com/public/Logo.png
 Content-Type: application/json

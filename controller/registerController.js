@@ -3,8 +3,7 @@ const bcrypt = require('bcrypt')
 const mongoose = require('mongoose');
 const registerController = {
     register: async (req, res) => {
-        const {email, password, conpassword} = req.body;
-        const {avatar} = req.file
+        const {email, password, conpassword,avatar} = req.body;
         const salts = await bcrypt.genSalt();
         const hashedPass = bcrypt.hashSync(password, salts, function (_err, hash) {
             console.log(hash);
@@ -12,8 +11,8 @@ const registerController = {
         const hashedcoPass = bcrypt.hashSync(conpassword, salts, function (_err, hash) {
             console.log(hash);
         });
-        const url = 'https://api-placeholder-server.onrender.com/public/'
-        const useravatar = url + avatar
+        const url = 'https://api-placeholder.onrender.com/public/'
+        const useravatar = url + avatar 
         try {
             const existingUser = await Auth.findOne({ email });
             const User = {

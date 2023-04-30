@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const morgan = require("morgan");
 const path = require ("path")
-const Auth = require('./model/authModel');
 const cors = require('cors');
+const server = express
 const port = process.env.PORT || 8000
 const corsOrigin = 'http://localhost:3000'
 require('./db/authdb');
@@ -26,20 +26,20 @@ app.use(express.static(path.join(__dirname +'./upload')))
 app.use(express.static(path.join(__dirname +'./public/avatar')))
 app.use(express.static(path.join(__dirname +'./public/plans')))
 app.use(express.static(path.join(__dirname +'./public')))
-app.use('',loginRouter)
-app.use('',registerRouter)
-app.use('',userRouter);
-app.use('',videoRouter)
-app.use('',uploadRouter)
-app.use('',materialRouter)
-app.use('',messagesRouter)
-app.use('',pinRouter)
-app.use('',pinimgRouter)
-app.use(express.static('./public'))
-app.use(express.static('./avatar'))
+app.use(loginRouter)
+app.use(registerRouter)
+app.use(userRouter);
+app.use(videoRouter)
+app.use(uploadRouter)
+app.use(materialRouter)
+app.use(messagesRouter)
+app.use(pinRouter)
+app.use(pinimgRouter)
+// app.use(express.static('./avatar'))
 // app.use(express.static('./public/plans'))
 // app.use(express.static('./public/plans/pins'))
 // app.use(express.static('./public/material'))
+app.use('/public',express.static('./public'))
 app.use('/public',express.static('./public/avatar'))
 app.use('/public',express.static('./public/plans'))
 app.use('/public',express.static('./public/plans/pins'))

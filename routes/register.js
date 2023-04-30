@@ -4,7 +4,7 @@ const cors = require('cors');
 const multer  = require('multer')
 const registerController = require('../controller/registerController');
 router.use(cors());
-const folder = './avatar'
+const folder = './public/avatar'
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, folder)
