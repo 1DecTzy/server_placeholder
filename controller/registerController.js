@@ -12,7 +12,7 @@ const registerController = {
         const hashedcoPass = bcrypt.hashSync(conpassword, salts, function (_err, hash) {
             console.log(hash);
         });
-        const url = 'https://api-placeholder-server.onrender.com/public/'
+        const url = 'https://api-placeholder.onrender.com/public/'
         const useravatar = url + avatar
         try {
             const existingUser = await Auth.findOne({ email });
